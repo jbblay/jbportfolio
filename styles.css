@@ -271,11 +271,11 @@ footer #current-year {
 /* Responsive Footer Adjustments */
 @media (max-width: 768px) {
     footer {
-        padding: 12px;
+        padding: 11px;
     }
 
     footer p {
-        font-size: 0.7rem; /* Slightly smaller font size on smaller screens */
+        font-size: 0.6rem; /* Slightly smaller font size on smaller screens */
     }
 }
 
@@ -366,35 +366,35 @@ footer #current-year {
 
     .profile-image {
 
-        width: 110px;
+        width: 100px;
 
-        height: 110px;
+        height: 100px;
 
     }
 
     .header-name {
 
-        font-size: 2.3rem;
+        font-size: 2.2rem;
 
     }
 
     .header-description {
 
-        font-size: 0.9rem;
+        font-size: 0.7rem;
 
     }
 
     .glow-box {
 
-        width: 87%;
+        width: 86%;
 
-        height: 68px;
+        height: 69px;
 
     }
 
     .company-name {
 
-        font-size: 1.2rem;
+        font-size: 1.1rem;
 
     }
 
