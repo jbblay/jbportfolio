@@ -124,19 +124,19 @@ body, html {
 @media (max-width: 768px) {
     /* Reduce font size for mobile */
     .tools-section h3 {
-        font-size: 0.7rem;
+        font-size: 0.5rem;
         padding: 8px;
     }
 
     .tag {
-        font-size: 0.7rem;
+        font-size: 0.5rem;
         padding: 8px 12px;
     }
 
     /* Add subtle shadow and background to the dropdown for readability */
     .tools-dropdown {
-        background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent dark background */
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8); /* Soft shadow */
+        background-color: rgba(0, 0, 0, 1); /* Semi-transparent dark background */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9); /* Soft shadow */
         border-radius: 10px; /* Rounded corners for the dropdown */
         padding: 20px;
     }
@@ -156,11 +156,11 @@ body, html {
 
     /* Adjust font size for mobile */
     .tools-section h3 {
-        font-size: 0.9rem;
+        font-size: 0.6rem;
     }
 
     .tag {
-        font-size: 0.7rem; /* Smaller text for mobile */
+        font-size: 0.5rem; /* Smaller text for mobile */
         padding: 8px 12px; /* Smaller padding for mobile */
     }
 }
@@ -168,7 +168,7 @@ body, html {
 
 /* Section styling (like Web Development, Pen Testing) */
 .tools-section h3 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 10px;
     color: #ffffff; /* White text */
 }
@@ -186,7 +186,7 @@ body, html {
     border: 1px solid #ffffff; /* White border */
     background-color: transparent; /* No background color */
     color: #ffffff; /* White text */
-    font-size: 1rem;
+    font-size: 0.7rem;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
 }
@@ -196,27 +196,7 @@ body, html {
     background-color: #5a339c; /* Violet color on hover */
 }
 
-/* Media query to apply this style on mobile devices */
-@media (max-width: 768px) {
-    .tools-dropdown {
-        left: -100%; /* Off-screen when closed */
-        padding: 20px; /* Padding for mobile */
-    }
 
-    .tools-dropdown.open {
-        transform: translateX(100%); /* Slide in from the left on mobile */
-    }
-
-    /* Adjust font size for mobile */
-    .tools-section h3 {
-        font-size: 1rem;
-    }
-
-    .tag {
-        font-size: 0.9rem; /* Smaller text for mobile */
-        padding: 8px 12px; /* Smaller padding for mobile */
-    }
-}
 
 /* Theme Toggle Button Styling */
 
