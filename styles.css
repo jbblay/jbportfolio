@@ -64,27 +64,78 @@ body, html {
     transform: scale(1.05); /* Slightly increase size on hover */
 }
 
-/* Tools Dropdown Styling */
-
-/* Tools Dropdown Styling */
+/* Ensure the dropdown is hidden initially */
 .tools-dropdown {
     position: absolute;
-    top:80px;
-    left: 20px;
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 300px;
-    opacity: 0; /* Start hidden */
-    visibility: hidden; /* Ensure it's hidden */
-    transition: opacity 0.5s ease-in-out, visibility 0s 0.5s; /* Smooth fade-in */
+    top: 60px;
+    left: -300px; /* Hidden off-screen initially */
+    width: 100%;
+    padding: 10px;
+    opacity: 0; /* Initially transparent */
+    visibility: hidden; /* Hidden initially */
+    display: flex;
+    flex-direction: column; /* Vertical layout */
+    gap: 20px; /* Space between sections */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
+/* When the dropdown is toggled open */
 .tools-dropdown.open {
-    opacity: 1; /* Show the dropdown */
-    visibility: visible; /* Make it visible */
-    transition: opacity 0.5s ease-in-out, visibility 0s 0s; /* Remove delay */
+    opacity: 1; /* Make it visible */
+    visibility: visible;
+    transform: translateX(0); /* Slide it into view */
+}
+
+/* Section styling (like Web Development, Pen Testing) */
+.tools-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #ffffff; /* White text */
+}
+
+/* Styling for the tags (round button-like tags) */
+.tags {
+    display: flex;
+    flex-wrap: wrap; /* Allows tags to wrap when necessary */
+    gap: 10px; /* Space between each tag */
+}
+
+.tag {
+    padding: 10px 15px;
+    border-radius: 20px; /* Rounded/pill-shaped tags */
+    border: 1px solid #ffffff; /* White border */
+    background-color: transparent; /* No background color */
+    color: #ffffff; /* White text */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Hover effect for tags */
+.tag:hover {
+    background-color: #5a339c; /* Violet color on hover */
+}
+
+/* Media query to apply this style on mobile devices */
+@media (max-width: 768px) {
+    .tools-dropdown {
+        left: -100%; /* Off-screen when closed */
+        padding: 20px; /* Padding for mobile */
+    }
+
+    .tools-dropdown.open {
+        transform: translateX(100%); /* Slide in from the left on mobile */
+    }
+
+    /* Adjust font size for mobile */
+    .tools-section h3 {
+        font-size: 1rem;
+    }
+
+    .tag {
+        font-size: 0.9rem; /* Smaller text for mobile */
+        padding: 8px 12px; /* Smaller padding for mobile */
+    }
 }
 
 /* Theme Toggle Button Styling */
