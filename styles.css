@@ -51,11 +51,16 @@ body, html {
     transform: scale(1.05); /* Slightly increase size on hover */
 }
 
-/* Header Description Hover Effect */
+
 .header-description {
     font-size: 1.1rem;
     margin-top: 5px;
     color: rgba(255, 255, 255, 0.8); /* Dimmer color for description */
+    text-align: center; /* Align text to the center */
+    max-width: 90%; /* Limit the width to prevent stretching */
+    margin: 5px auto; /* Center the text horizontally */
+    word-wrap: break-word; /* Ensure long words break properly */
+    line-height: 1.5; /* Improve readability with proper line height */
     transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for shadow and scale */
 }
 
