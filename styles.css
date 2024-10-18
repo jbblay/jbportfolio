@@ -51,18 +51,13 @@ body, html {
     transform: scale(1.05); /* Slightly increase size on hover */
 }
 
-
 .header-description {
-    font-size: 0.2rem;
-    margin-top: 3px;
+    font-size: 1.1rem;
+    margin-top: 5px;
     color: rgba(255, 255, 255, 0.8); /* Dimmer color for description */
-    text-align: center; /* Align text to the center */
-    max-width: 50%; /* Limit the width to prevent stretching */
-    margin: 3px auto; /* Center the text horizontally */
-    word-wrap: break-word; /* Ensure long words break properly */
-    line-height: 0.3; /* Improve readability with proper line height */
     transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for shadow and scale */
-}
+} the text are stretched on the screen and not properly aligned center and not wrapping 
+
 
 .header-description:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Smooth shadow on hover */
