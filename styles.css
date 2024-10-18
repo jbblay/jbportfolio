@@ -79,33 +79,52 @@ body, html {
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
-/* When the dropdown is toggled open */
-.tools-dropdown.open {
-    opacity: 1; /* Make it visible */
-    visibility: visible;
-    transform: translateX(0); /* Slide it into view */
+
+/* General tools dropdown styling */
+.tools-dropdown {
+    position: absolute;
+    top: 60px;
+    left: -300px; /* Hidden off-screen initially */
+    width: 100%;
+    padding: 10px;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column; /* Vertical layout */
+    gap: 20px; /* Space between sections */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
-/* Section styling (like Web Development, Pen Testing) */
+/* Tools dropdown when open (shown) */
+.tools-dropdown.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0); /* Slide in */
+}
+
+/* Section heading (like Web Development, Pen Testing) */
 .tools-section h3 {
     font-size: 1.2rem;
     margin-bottom: 10px;
-    color: #ffffff; /* White text */
+    color: #ffffff; /* White text for clarity */
+    background-color: rgba(0, 0, 0, 0.5); /* Dark semi-transparent background for readability */
+    padding: 10px;
+    border-radius: 8px; /* Subtle rounding for sections */
 }
 
-/* Styling for the tags (round button-like tags) */
+/* Styling for the tags (pill-shaped buttons) */
 .tags {
     display: flex;
-    flex-wrap: wrap; /* Allows tags to wrap when necessary */
-    gap: 10px; /* Space between each tag */
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 10px; /* Space between tags */
 }
 
 .tag {
     padding: 10px 15px;
-    border-radius: 20px; /* Rounded/pill-shaped tags */
-    border: 1px solid #ffffff; /* White border */
-    background-color: transparent; /* No background color */
-    color: #ffffff; /* White text */
+    border-radius: 20px; /* Rounded tags */
+    border: 1px solid #ffffff;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark transparent background */
+    color: #ffffff;
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
@@ -113,8 +132,31 @@ body, html {
 
 /* Hover effect for tags */
 .tag:hover {
-    background-color: #5a339c; /* Violet color on hover */
+    background-color: #5a339c; /* Violet hover background */
 }
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+    /* Reduce font size for mobile */
+    .tools-section h3 {
+        font-size: 1rem;
+        padding: 8px;
+    }
+
+    .tag {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+
+    /* Add subtle shadow and background to the dropdown for readability */
+    .tools-dropdown {
+        background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent dark background */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow */
+        border-radius: 10px; /* Rounded corners for the dropdown */
+        padding: 20px;
+    }
+}
+
 
 /* Media query to apply this style on mobile devices */
 @media (max-width: 768px) {
