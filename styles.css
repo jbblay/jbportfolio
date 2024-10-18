@@ -1,0 +1,486 @@
+/* Full-Screen Height and Deep Gradient Background */
+
+body, html {
+
+    height: 100%;
+
+    margin: 0;
+
+    font-family: 'Arial', sans-serif;
+
+    background: linear-gradient(135deg, #5a339c 0%, #261832 100%);
+
+    color: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    transition: background 0.5s ease-in-out; /* Smooth transition for theme change */
+
+}
+/* Profile Image Styling with Rounded Corners and Hover Shadow */
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Fully rounded image */
+    object-fit: cover;
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for shadow and scale */
+}
+
+.profile-image:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Smooth shadow on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+/* Header Name Hover Effect */
+.header-name {
+    font-size: 2.5rem;
+    margin-top: 10px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for shadow and scale */
+}
+
+.header-name:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Smooth shadow on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+/* Header Description Hover Effect */
+.header-description {
+    font-size: 1.1rem;
+    margin-top: 5px;
+    color: rgba(255, 255, 255, 0.8); /* Dimmer color for description */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for shadow and scale */
+}
+
+.header-description:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Smooth shadow on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+/* Tools Dropdown Styling */
+
+/* Tools Dropdown Styling */
+.tools-dropdown {
+    position: absolute;
+    top:80px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 300px;
+    opacity: 0; /* Start hidden */
+    visibility: hidden; /* Ensure it's hidden */
+    transition: opacity 0.5s ease-in-out, visibility 0s 0.5s; /* Smooth fade-in */
+}
+
+.tools-dropdown.open {
+    opacity: 1; /* Show the dropdown */
+    visibility: visible; /* Make it visible */
+    transition: opacity 0.5s ease-in-out, visibility 0s 0s; /* Remove delay */
+}
+
+/* Theme Toggle Button Styling */
+
+.theme-toggle {
+
+    position: absolute;
+
+    top: 20px;
+
+    right: 20px;
+
+    background-color: rgba(255, 255, 255, 0.2);
+
+    border: none;
+
+    padding: 10px;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    font-size: 1.8rem;
+
+    color: white;
+
+    transition: background-color 0.3s ease;
+
+}
+
+/* Tools Toggle Button Styling - Top Left */
+.tools-toggle {
+    position: absolute;
+    top: 20px;  /* Same distance from the top as the theme-toggle */
+    left: 20px;  /* Positioned to the left */
+    background-color: rgba(255, 255, 255, 0.2);  /* Same background style */
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.8rem;  /* Same size as the theme-toggle */
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.tools-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.4);  /* Same hover effect */
+}
+
+.tools-toggle i {
+    pointer-events: none;  /* Ensure icon is clickable */
+}
+
+.theme-toggle:hover {
+
+    background-color: rgba(255, 255, 255, 0.4);
+
+}
+
+.theme-toggle i {
+
+    pointer-events: none; /* Ensure icon is clickable */
+
+}
+
+/* Header Styling (Name and Description Hierarchical) */
+
+.header-name {
+
+    font-size: 2.5rem;
+
+    margin: 5px 0;
+
+    color: white;
+
+}
+
+.header-description {
+
+    font-size: 1rem;
+
+    margin: 5px 0;
+
+    max-width: 90%;
+
+    color: rgba(255, 255, 255, 0.8);
+
+}
+
+/* Container Flexbox for Buttons */
+
+.container {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    width: 100%;
+
+    padding: 10px;
+
+}
+
+/* Glowing Buttons Styling */
+
+.glow-box {
+
+    width: 90%;
+
+    height: 70px;
+
+    background-color: #2f2f3d;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 20px;
+
+    border-radius: 35px;
+
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    margin: 10px 0;
+
+    box-shadow: 0 0 10px rgba(90, 51, 156, 0.9), inset 0 0 15px rgba(90, 51, 156, 0.5);
+
+}
+
+.glow-box:hover {
+
+    animation: bounce 0.5s ease-in-out;
+
+    box-shadow: 0 0 20px rgba(90, 51, 156, 1), inset 0 0 20px rgba(90, 51, 156, 0.8);
+
+}
+
+.glow-box i {
+
+    color: white;
+
+}
+
+.company-name {
+
+    font-size: 1.2rem;
+
+    color: white;
+
+}
+
+/* Footer Styling */
+/* Footer Font Styling */
+footer {
+    font-family: 'Arial', sans-serif; /* Use a clean sans-serif font */
+    color: #ffffff; /* Pure white for text */
+    font-size: 1rem; /* Default font size */
+    text-align: center; /* Center align all text */
+}
+
+/* Styling for Contact Information */
+footer p {
+    margin: 10px 0; /* Add space between each line */
+    font-style: italic; /* Italic style for contact details */
+}
+
+footer p a {
+    color: #ffffff; /* Keep links white */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Copyright Line Styling */
+footer #current-year {
+    font-weight: bold; /* Bold for copyright year */
+}
+
+
+/* Responsive Footer Adjustments */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px;
+    }
+
+    footer p {
+        font-size: 0.9rem; /* Slightly smaller font size on smaller screens */
+    }
+}
+
+
+/* Responsive Styles - Desktop View (Larger Devices) */
+
+@media (min-width: 992px) {
+
+    .profile-image {
+
+        width: 180px; /* Larger profile image */
+
+        height: 180px;
+
+    }
+
+    .header-name {
+
+        font-size: 3.5rem; /* Larger name */
+
+    }
+
+    .header-description {
+
+        font-size: 1.5rem; /* Larger description */
+
+    }
+
+    .glow-box {
+
+        width: 80%; /* Make buttons wider on desktop */
+
+        height: 90px; /* Increase button height */
+
+    }
+
+    .company-name {
+
+        font-size: 1.5rem; /* Increase font size for button text */
+
+    }
+
+}
+
+/* Responsive Styles - Tablet View (Medium Devices) */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .profile-image {
+
+        width: 150px;
+
+        height: 150px;
+
+    }
+
+    .header-name {
+
+        font-size: 3rem; /* Medium size for name */
+
+    }
+
+    .header-description {
+
+        font-size: 1.3rem; /* Medium size for description */
+
+    }
+
+    .glow-box {
+
+        width: 85%;
+
+        height: 80px;
+
+    }
+
+    .company-name {
+
+        font-size: 1.3rem; /* Slightly larger button text */
+
+    }
+
+}
+
+/* Mobile Styles - Small Devices */
+
+@media (max-width: 767px) {
+
+    .profile-image {
+
+        width: 120px;
+
+        height: 120px;
+
+    }
+
+    .header-name {
+
+        font-size: 2.5rem;
+
+    }
+
+    .header-description {
+
+        font-size: 1rem;
+
+    }
+
+    .glow-box {
+
+        width: 90%;
+
+        height: 70px;
+
+    }
+
+    .company-name {
+
+        font-size: 1.2rem;
+
+    }
+
+}
+/* Fade-in Animation */
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px); /* Slight upwards movement */
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/* Pop-in Animation for the Profile Image */
+
+@keyframes popIn {
+
+    0% {
+
+        transform: scale(0.5);
+
+        opacity: 0;
+
+    }
+
+    100% {
+
+        transform: scale(1);
+
+        opacity: 1;
+
+    }
+
+}
+
+/* Bounce Animation for Hover Effect on Buttons */
+
+@keyframes bounce {
+
+    0%, 100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-10px);
+
+    }
+
+}
+
+/* Background Gradient Shift Animation */
+
+@keyframes gradientShift {
+
+    0% {
+
+        background: linear-gradient(135deg, #5a339c 0%, #261832 100%);
+
+    }
+
+    50% {
+
+        background: linear-gradient(135deg, #3a2069 0%, #161426 100%);
+
+    }
+
+    100% {
+
+        background: linear-gradient(135deg, #5a339c 0%, #261832 100%);
+
+    }
+
+}

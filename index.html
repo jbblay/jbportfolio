@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JB</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons for the logos and tools -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Theme Toggle Button at the Top Right -->
+    <button class="theme-toggle" id="theme-toggle-btn">
+        <i class="fas fa-palette"></i>
+    </button>
+
+    <!-- Tools Toggle Button on the Left -->
+    <button class="tools-toggle" id="tools-toggle-btn">
+        <i class="fas fa-tools"></i>
+    </button>
+
+    <!-- Tools Dropdown Content (Fade-in and Visual Hierarchy) -->
+    <div class="tools-dropdown" id="tools-dropdown">
+        <h2>Technologies I Use</h2>
+        
+        <!-- Web Development Section -->
+        <div class="tools-section">
+            <h3>Web Development</h3>
+            <div class="tags">
+                <button class="tag">HTML</button>
+                <button class="tag">CSS</button>
+                <button class="tag">JavaScript</button>
+                <button class="tag">React</button>
+                <button class="tag">Node.js</button>
+            </div>
+        </div>
+        
+        <!-- Pen Testing Section -->
+        <div class="tools-section">
+            <h3>Pen Testing</h3>
+            <div class="tags">
+                <button class="tag">Kali Linux</button>
+                <button class="tag">Wireshark</button>
+                <button class="tag">Metasploit</button>
+                <button class="tag">Nmap</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header with Placeholder Image, Name, and Description -->
+    <header class="text-center fade-in">
+        <div class="header-content">
+            <!-- Placeholder Profile Image (Favicon) -->
+            <img src="profile.jpg" alt="Profile Placeholder" class="profile-image fade-in" >
+            <div class="header-name-info fade-in">
+                <h1 class="header-name fade-in">JOSEPH BLAY</h1>
+                <p class="header-description fade-in">Programmer | Web Developer | Computer Scientist</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Section with Glowing Buttons -->
+    <main class="container d-flex justify-content-center align-items-center flex-column fade-in popIn">
+        <div class="glow-box mb-4 fade-in">
+            <i class="fab fa-linkedin fa-2x"></i>
+            <span class="company-name">LinkedIn</span>
+        </div>
+        <div class="glow-box mb-4 fade-in">
+            <i class="fab fa-github fa-2x"></i>
+            <span class="company-name">GitHub</span>
+        </div>
+        <div class="glow-box mb-4 fade-in">
+            <i class="fab fa-twitter fa-2x"></i>
+            <span class="company-name">Twitter</span>
+        </div>
+        <div class="glow-box mb-4 fade-in">
+            <i class="fab fa-instagram fa-2x"></i>
+            <span class="company-name">Instagram</span>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center fade-in">
+      <p> Call: +972524847776 </p>
+      <p> Email: josephnyameke45@gmail.com </p>       
+       <p>&copy; <span id="current-year"></span> Your Name. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- JavaScript to Toggle the Dropdown -->
+    <script>
+        // Automatically update the year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Toggle Tools Dropdown with fade-in effect
+        document.getElementById('tools-toggle-btn').addEventListener('click', function() {
+            document.getElementById('tools-dropdown').classList.toggle('open');
+            
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
