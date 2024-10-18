@@ -70,7 +70,7 @@ body, html {
     position: absolute;
     top: 60px;
     left: -300px; /* Hidden off-screen initially */
-    width: 80%;
+    width: 100%;
     padding: 10px;
     opacity: 0;
     visibility: hidden;
@@ -89,10 +89,10 @@ body, html {
 
 /* Section heading (like Web Development, Pen Testing) */
 .tools-section h3 {
-    font-size: 1rem;
-    margin-bottom: 8px;
+    font-size: 0.7rem;
+    margin-bottom: 7px;
     color: #ffffff; /* White text for clarity */
-    background-color: rgba(0, 0, 0,0.9); /* Dark semi-transparent background for readability */
+    background-color: rgba(0, 0, 0,1); /* Dark semi-transparent background for readability */
     padding: 7px;
     border-radius: 8px; /* Subtle rounding for sections */
 }
@@ -101,7 +101,7 @@ body, html {
 .tags {
     display: flex;
     flex-wrap: wrap; /* Allow wrapping */
-    gap: 10px; /* Space between tags */
+    gap: 8px; /* Space between tags */
 }
 
 .tag {
@@ -110,7 +110,7 @@ body, html {
     border: 1px solid #ffffff;
     background-color: rgba(0, 0, 0, 0.6); /* Dark transparent background */
     color: #ffffff;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
 }
@@ -124,19 +124,19 @@ body, html {
 @media (max-width: 768px) {
     /* Reduce font size for mobile */
     .tools-section h3 {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         padding: 8px;
     }
 
     .tag {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         padding: 8px 12px;
     }
 
     /* Add subtle shadow and background to the dropdown for readability */
     .tools-dropdown {
-        background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background */
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); /* Soft shadow */
+        background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent dark background */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8); /* Soft shadow */
         border-radius: 10px; /* Rounded corners for the dropdown */
         padding: 20px;
     }
@@ -156,7 +156,7 @@ body, html {
 
     /* Adjust font size for mobile */
     .tools-section h3 {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 
     .tag {
@@ -406,7 +406,7 @@ footer #current-year {
     }
 
     footer p {
-        font-size: 0.6rem; /* Slightly smaller font size on smaller screens */
+        font-size: 0.7rem; /* Slightly smaller font size on smaller screens */
     }
 }
 
@@ -517,9 +517,9 @@ footer #current-year {
 
     .glow-box {
 
-        width: 86%;
+        width: 88%;
 
-        height: 69px;
+        height: 70px;
 
     }
 
