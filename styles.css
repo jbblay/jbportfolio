@@ -138,6 +138,59 @@ body, html {
     }
 }
 
+
+/* Section styling (like Web Development, Pen Testing) */
+.tools-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #ffffff; /* White text */
+}
+
+/* Styling for the tags (round button-like tags) */
+.tags {
+    display: flex;
+    flex-wrap: wrap; /* Allows tags to wrap when necessary */
+    gap: 10px; /* Space between each tag */
+}
+
+.tag {
+    padding: 10px 15px;
+    border-radius: 20px; /* Rounded/pill-shaped tags */
+    border: 1px solid #ffffff; /* White border */
+    background-color: transparent; /* No background color */
+    color: #ffffff; /* White text */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Hover effect for tags */
+.tag:hover {
+    background-color: #5a339c; /* Violet color on hover */
+}
+
+/* Media query to apply this style on mobile devices */
+@media (max-width: 768px) {
+    .tools-dropdown {
+        left: -100%; /* Off-screen when closed */
+        padding: 20px; /* Padding for mobile */
+    }
+
+    .tools-dropdown.open {
+        transform: translateX(100%); /* Slide in from the left on mobile */
+    }
+
+    /* Adjust font size for mobile */
+    .tools-section h3 {
+        font-size: 1rem;
+    }
+
+    .tag {
+        font-size: 0.9rem; /* Smaller text for mobile */
+        padding: 8px 12px; /* Smaller padding for mobile */
+    }
+}
+
 /* Theme Toggle Button Styling */
 
 .theme-toggle {
