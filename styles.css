@@ -253,7 +253,7 @@ footer {
 
 /* Styling for Contact Information */
 footer p {
-    margin: 10px 0; /* Add space between each line */
+    margin: 5px 0; /* Add space between each line */
     font-style: italic; /* Italic style for contact details */
 }
 
