@@ -64,21 +64,6 @@ body, html {
     transform: scale(1.05); /* Slightly increase size on hover */
 }
 
-/* Ensure the dropdown is hidden initially */
-.tools-dropdown {
-    position: absolute;
-    top: 60px;
-    left: -300px; /* Hidden off-screen initially */
-    width: 100%;
-    padding: 10px;
-    opacity: 0; /* Initially transparent */
-    visibility: hidden; /* Hidden initially */
-    display: flex;
-    flex-direction: column; /* Vertical layout */
-    gap: 20px; /* Space between sections */
-    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-}
-
 
 /* General tools dropdown styling */
 .tools-dropdown {
